@@ -11,6 +11,8 @@
 
 "("|")"|";"|","|"{"|"}" { printf("Delimiter: %s\n", yytext); }
 
+[a-zA-Z_][a-zA-Z0-9_]*        { printf("Identifier: %s\n", yytext); }
+
 [ \t\n]+ ; 
 
 . { printf("Unknown: %s\n", yytext); }
